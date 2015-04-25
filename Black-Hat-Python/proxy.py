@@ -50,9 +50,18 @@ def proxy_handler(client_socket,remote_host,remote_port,receive_first):
         
         # if we have data to send to our local client, send it
         if len(remote_buffer):
-            print "[*] Sending %d data to remote host" % len(remote_buffer)
+            print "[*] Sending %d bytes to localhost" % len(remote_buffer)
             client_socket.send(remote_buffer)
-        
+    # now loop sending to remote and sending to local
+    while True:
+        local_buffer = receive_from(client_socket)
+        if len(local_buffer):
+            print "[*] Received %d bytes from localhost" % len(local_buffer)
+            hexdump(local_buffer)
+            
+            # send it to our handler
+            local_buffer = response_handler(remote_buffer)
+    
 def receive_from(remote_socket):
     return
 
