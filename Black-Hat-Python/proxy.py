@@ -60,7 +60,17 @@ def proxy_handler(client_socket,remote_host,remote_port,receive_first):
             hexdump(local_buffer)
             
             # send it to our handler
-            local_buffer = response_handler(remote_buffer)
+            local_buffer = response_handler(local_buffer)
+            
+            # send it off to the remote host
+            remote_socket.send(local_buffer)
+            print "[*] Sent to remote."
+            
+        # receive the response back
+        remote_buffer = received_from(remote_socket)
+        
+        if len(remote_buffer):
+            print "[*] Received %d bytes from remote." % len(remote)buffer
     
 def receive_from(remote_socket):
     return
