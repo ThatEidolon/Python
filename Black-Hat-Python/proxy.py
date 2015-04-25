@@ -30,6 +30,37 @@ def server_loop(local_host,local_port,remote_host,remote_port,receive_first):
         proxy_thread = threading.Thread(target=proxy_handler,args=(client_socket,remote_host,remote_port,receive_first))
         
         proxy_thread.start()
+
+def proxy_handler(client_socket,remote_host,remote_port,receive_first):
+    # connect to remote host
+    remote_socket = socket.socket(socket.AF_INET, socket.STREAM)
+    
+    try:
+        remote_socket.connect((remote_host,remote_port))
+    except:
+        # something went wrong, eject!
+        print "[!!] Unable to connect to remote host, exiting"
+        sys.exit(0)
+    if receive_first:
+        remote_buffer = receive_from(remote_socket)
+        hexdump(remote_buffer)
+        
+        # send it to our response handler
+        remote_buffer = response_handler(remote_buffer)
+        
+        # if we have data to send to our local client, send it
+        if len(remote_buffer):
+            print "[*] Sending %d data to remote host" % len(remote_buffer)
+            client_socket.send(remote_buffer)
+        
+def receive_from(remote_socket):
+    return
+
+def hexdump(remote_buffer):
+    return
+
+def response_handler(remote_buffer):
+    return
         
 def main():
     # cursory check of command line args
