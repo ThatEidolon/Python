@@ -118,7 +118,7 @@ def request_handler(local_buffer):
 def main():
     # cursory check of command line args
     if len(sys.argv[1:]) != 5:
-        print "Usage: ./proxy.py [localhost] [localport] [remotehost] [remoteport] [reveive_first]"
+        print "Usage:   ./proxy.py [localhost] [localport] [remotehost] [remoteport] [reveive_first]"
         print "Example: ./proxy.py 127.0.0.1 9000 10.11.132.1 9000 True"
         sys.exit(0)
     
