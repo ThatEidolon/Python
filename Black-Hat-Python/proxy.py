@@ -28,8 +28,8 @@ def server_loop(local_host,local_port,remote_host,remote_port,receive_first):
     try:
         server.bind((local_host,local_port))
     except:
-        print "[!!] Failed to listen on %s:%d" % (local_host, local_port)
-        print "[!!] Check for other listening sockets or correct permissions"
+        print "[!] Failed to listen on %s:%d" % (local_host, local_port)
+        print "[!] Check for other listening sockets or correct permissions"
         sys.exit(0)
     
     # listen with 5 backlogged--queued--connections
@@ -48,13 +48,14 @@ def server_loop(local_host,local_port,remote_host,remote_port,receive_first):
 
 def proxy_handler(client_socket,remote_host,remote_port,receive_first):
     # connect to remote host
-    remote_socket = socket.socket(socket.AF_INET, socket.STREAM)
+    remote_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     
     try:
         remote_socket.connect((remote_host,remote_port))
+        print "[+] Remote Connection established"
     except:
         # something went wrong, eject!
-        print "[!!] Unable to connect to remote host, exiting"
+        print "[!] Unable to connect to remote host, exiting"
         sys.exit(0)
     if receive_first:
         remote_buffer = receive_from(remote_socket)
@@ -78,11 +79,12 @@ def proxy_handler(client_socket,remote_host,remote_port,receive_first):
             local_buffer = request_handler(local_buffer)
             
             # send it off to the remote host
+            print "[*] Buffer = %s" % local_buffer
             remote_socket.send(local_buffer)
             print "[*] Sent to remote."
             
         # receive the response back
-        remote_buffer = received_from(remote_socket)
+        remote_buffer = receive_from(remote_socket)
         
         if len(remote_buffer):
             print "[*] Received %d bytes from remote." % len(remote_buffer)
@@ -99,26 +101,40 @@ def proxy_handler(client_socket,remote_host,remote_port,receive_first):
         if not len(remote_buffer) or not len(local_buffer):
             remote_socket.close()
             client_socket.close()
-            print "[*] No more data, closing connections/"       
+            print "[*] No more data, closing connections"       
             break
     
-def receive_from(remote_socket):
-    return
+def receive_from(connection):
+    buffer = ""
+    
+    # set a two second timeout; this my need to be adjusted
+    connection.settimeout(2)
+    
+    try:
+        # read from buffer until full, or connection times out
+        while True:
+            data = connection.recv(4096)
+            if not data:
+                break
+            buffer += data
+    except:
+        pass
+    return buffer
 
 # handler function to modify server responses
 def response_handler(remote_buffer):
     # perform packet modifications here
-    return
+    return remote_buffer
 
 # handler function to modify client requests
 def request_handler(local_buffer):
     # perform packet modifications here
-    return
+    return local_buffer
         
 def main():
     # cursory check of command line args
     if len(sys.argv[1:]) != 5:
-        print "Usage:   ./proxy.py [localhost] [localport] [remotehost] [remoteport] [reveive_first]"
+        print "Usage:   ./proxy.py [localhost] [localport] [remotehost] [remoteport] [receive_first]"
         print "Example: ./proxy.py 127.0.0.1 9000 10.11.132.1 9000 True"
         sys.exit(0)
     
