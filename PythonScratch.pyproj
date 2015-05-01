@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2b850da3-ae3a-4f74-97f8-b59a6024ba39}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>
+    </StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Black-Hat-Python\bh-sshcmd.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter10\file_monitor.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter10\process_monitor.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter11\code_coverage.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter11\code_inject.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter11\grabhashes.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter2\bhnet.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter2\listing-1-3.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter2\proxy.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter3\scanner.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter3\sniffer.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter3\sniffer_ip_header_decode.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter3\sniffer_with_icmp.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter4\arper.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter4\mail_sniffer.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter4\pic_carver.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter5\content_bruter.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter5\joomla_killer.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter5\web_app_mapper.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter6\bhp_bing.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter6\bhp_fuzzer.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter7\git_trojan.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter8\keylogger.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter8\sandbox_detect.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter8\screenshotter.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter8\shell_exec.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter9\cred_server.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter9\decryptor.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter9\ie_exfil.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter9\keygen.py" />
+    <Compile Include="Black-Hat-Python\BHP-Code\Chapter9\mitb.py" />
+    <Compile Include="Black-Hat-Python\bhpnet.py" />
+    <Compile Include="Black-Hat-Python\bh_sshRcmd.py" />
+    <Compile Include="Black-Hat-Python\bh_sshserver.py" />
+    <Compile Include="Black-Hat-Python\proxy.py" />
+    <Compile Include="Black-Hat-Python\tcp-client.py" />
+    <Compile Include="Black-Hat-Python\tcp-server.py" />
+    <Compile Include="Black-Hat-Python\udp-client.py" />
+    <Compile Include="Black-Hat-Python\untitled-1.py" />
+    <Compile Include="cybrary\Apprentice_Activities.py" />
+    <Compile Include="cybrary\Apprentice_Activities_Tester.py" />
+    <Compile Include="cybrary\Apprentice_Final_Activity.py" />
+    <Compile Include="Grey-Hat-Python\chapter1-printf.py" />
+    <Compile Include="Grey-Hat-Python\src\access_violation_handler.py" />
+    <Compile Include="Grey-Hat-Python\src\addnum_function_call.py" />
+    <Compile Include="Grey-Hat-Python\src\backdoor.py" />
+    <Compile Include="Grey-Hat-Python\src\backdoor_shell.py" />
+    <Compile Include="Grey-Hat-Python\src\badchar.py" />
+    <Compile Include="Grey-Hat-Python\src\buffer_overflow.py" />
+    <Compile Include="Grey-Hat-Python\src\code_injector.py" />
+    <Compile Include="Grey-Hat-Python\src\cross_ref.py" />
+    <Compile Include="Grey-Hat-Python\src\dll_injector.py" />
+    <Compile Include="Grey-Hat-Python\src\file_fuzzer.py" />
+    <Compile Include="Grey-Hat-Python\src\file_hider.py" />
+    <Compile Include="Grey-Hat-Python\src\findinstruction.py" />
+    <Compile Include="Grey-Hat-Python\src\firefox_hook.py" />
+    <Compile Include="Grey-Hat-Python\src\func_coverage.py" />
+    <Compile Include="Grey-Hat-Python\src\hippie_easy.py" />
+    <Compile Include="Grey-Hat-Python\src\injector.py" />
+    <Compile Include="Grey-Hat-Python\src\ioctl_dump.py" />
+    <Compile Include="Grey-Hat-Python\src\ioctl_fuzzer.py" />
+    <Compile Include="Grey-Hat-Python\src\my_debugger.py" />
+    <Compile Include="Grey-Hat-Python\src\my_debugger_defines.py" />
+    <Compile Include="Grey-Hat-Python\src\my_ioctl_fuzzer.py" />
+    <Compile Include="Grey-Hat-Python\src\my_test.py" />
+    <Compile Include="Grey-Hat-Python\src\printf_loop.py" />
+    <Compile Include="Grey-Hat-Python\src\printf_random.py" />
+    <Compile Include="Grey-Hat-Python\src\setup.py" />
+    <Compile Include="Grey-Hat-Python\src\stack_calc.py" />
+    <Compile Include="Grey-Hat-Python\src\upx_unpacker.py" />
+    <Compile Include="Violent-Python\Chapter 1\banner.py" />
+    <Compile Include="Violent-Python\Chapter 1\crack.py" />
+    <Compile Include="Violent-Python\Chapter 1\os.py" />
+    <Compile Include="Violent-Python\Chapter 1\sha512-crack.py" />
+    <Compile Include="Violent-Python\Chapter 1\unzip.py" />
+    <Compile Include="Violent-Python\Chapter 2\port-scanner.py" />
+    <Compile Include="Violent-Python\Chapter 2\python-nmap.py" />
+    <Compile Include="Violent-Python\Chapter 2\ssh-bot.py" />
+    <Compile Include="Violent-Python\Chapter 2\ssh-test.py" />
+    <Compile Include="Violent-Python\hello.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-1\1-vulnScanner.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-1\2-passwdCrack.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-1\3-zipCrack.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\1-portScan.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\2-nmapScan.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\3-botNet.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\3-bruteKey.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\3-pxsshCommand.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\3-sshBrute.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\3-sshCommand.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\4-anonLogin.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\4-bruteLogin.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\4-defaultPages.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\4-injectPage.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\4-massCompromise.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\5-conficker.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-2\6-freeFloat.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-3\1-discoverNetworks.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-3\2-dumpRecycleBin.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-3\3-pdfRead.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-3\4-exifFetch.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-3\5-skypeParse.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-3\6-firefoxParse.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-3\7-iphoneMessages.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\1-geoIP.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\10-idsFoil.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\2-printDirection.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\3-geoPrint.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\4-googleEarthPcap.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\5-findDDoS.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\6-spoofDetect.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\7-testFastFlux.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\8-testDomainFlux.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-4\9-mitnickAttack.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\1-testSniff.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\10-iphoneFinder.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\11-rfcommScan.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\12-sdpScan.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\13-ninjaPrint.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\14-blueBug.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\2-creditSniff.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\3-hotelSniff.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\4-googleSniff.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\5-ftpSniff.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\6-sniffHidden.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\6-sniffProbe.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\7-dup.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\7-uavSniff.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\8-fireCatcher.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\9-btFind.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\9-btScan.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-5\dup.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\1-viewPage.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\10-sendMail.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\10-sendSpam.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\2-proxyTest.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\3-userAgentTest.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\4-printCookies.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\5-kittenTest.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\6-linkParser.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\7-imageMirror.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\8-anonGoogle.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\8-googleJson.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\8-googleJumbled.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\9-twitterClass.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\9-twitterGeo.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\9-twitterInterests.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\9-twitterRecon.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\anonBrowser.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-6\twitterClass.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-7\1-bindshell.py" />
+    <Compile Include="Violent-Python\Violent-Python-Examples\Chapter-7\2-virusCheck.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Violent-Python\Chapter 1\dictionary.txt" />
+    <Content Include="Violent-Python\Chapter 1\evil\evil.jpg" />
+    <Content Include="Violent-Python\Chapter 1\evil\note_to_adam.txt" />
+    <Content Include="Violent-Python\Chapter 1\passwords.txt" />
+    <Content Include="Violent-Python\Chapter 1\shadow.txt" />
+    <Content Include="Violent-Python\Chapter 1\vuln-banners.txt" />
+    <Content Include="Violent-Python\Violent-Python-Examples\Chapter-1\dictionary.txt" />
+    <Content Include="Violent-Python\Violent-Python-Examples\Chapter-1\passwords.txt" />
+    <Content Include="Violent-Python\Violent-Python-Examples\Chapter-1\vuln-banners.txt" />
+    <Content Include="Violent-Python\Violent-Python-Examples\Chapter-2\pass.txt" />
+    <Content Include="Violent-Python\Violent-Python-Examples\Chapter-2\userpass.txt" />
+    <Content Include="Violent-Python\Violent-Python-Examples\Chapter-6\mlb-cities.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Black-Hat-Python" />
+    <Folder Include="Black-Hat-Python\BHP-Code\" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter10" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter11" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter2" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter3" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter4" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter5" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter6" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter7" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter8" />
+    <Folder Include="Black-Hat-Python\BHP-Code\Chapter9" />
+    <Folder Include="cybrary" />
+    <Folder Include="Grey-Hat-Python" />
+    <Folder Include="Grey-Hat-Python\src" />
+    <Folder Include="Violent-Python" />
+    <Folder Include="Violent-Python\Chapter 1" />
+    <Folder Include="Violent-Python\Chapter 1\evil" />
+    <Folder Include="Violent-Python\Chapter 2" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\Chapter-1" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\Chapter-2" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\Chapter-3" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\Chapter-4" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\Chapter-5" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\Chapter-6" />
+    <Folder Include="Violent-Python\Violent-Python-Examples\Chapter-7" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

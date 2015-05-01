@@ -8,6 +8,14 @@ def remove_letter(): #Remove a selected letter from a string
 
 def num_compare(): #Compare 2 numbers to determine the larger
     print "Number Compare"
+    num1 = int(raw_input("Enter First Number: "))
+    num2 = int(raw_input("Enter Second Number: "))
+    if num1 > num2 :
+        print "First number is larger"
+    elif num1 < num2 :
+        print "Second number is larger"
+    else :
+        print "The numbers are equal"
     return
 
 def print_string(): #Print the previously stored string
