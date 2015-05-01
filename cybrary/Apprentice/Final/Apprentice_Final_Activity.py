@@ -3,7 +3,11 @@ import operator
 saved_string = ''
 
 def remove_letter(): #Remove a selected letter from a string
-    print "Remove Letter"
+    base_string = str(raw_input("Enter String: "))
+    letter_remove = str(raw_input("Enter Letter: "))
+
+    letter_remove = letter_remove[0]
+    print "New String: %s" % base_string.strip(letter_remove)
     return
 
 def num_compare(): #Compare 2 numbers to determine the larger
