@@ -1,23 +1,36 @@
 import socket
 
-'''1.1) Take two arguments, a list and an integer. The list is a series 
-of strings; one of those strings will be the filename, the others will 
-be the file contents. The integer is the location in the list of the file 
-name. (Write each string to a separate line)
-
-list:
-a 0 <-contents
-b 1 <-contents
-c 2 <-contents
-d 3 <-contents
-e 4 <- filename
-f 5 <-contents
-
-item:
-4
-
-'''
 def journeyman1(str_list , item):
+
+# 1.1) Take two arguments, a list and an integer. The list is a series 
+# of strings; one of those strings will be the filename, the others will 
+# be the file contents. The integer is the location in the list of the file 
+# name. (Write each string to a separate line)
+
+# list:
+# a 0 <-contents
+# b 1 <-contents
+# c 2 <-contents
+# d 3 <-contents
+# e 4 <- filename
+# f 5 <-contents
+
+# item:
+# 4
+
+    # open a new file object with name being the name identified by item
+    new_file = open(str(str_list[item]), 'w+')
+    
+    # remove the filename from the list
+    str_list = str_list[:item] + some_list[item + 1:]
+
+    # start writing out the list
+    for line in str_list:
+        new_file.write(str(line))
+
+    # close file
+    new_file.close()
+
     return
 
 
