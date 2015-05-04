@@ -55,13 +55,17 @@ def journeyman2(final_num):
 '''1.3) Write a python script which connects to the included server 
 on port 50001 and returns the message it receives.'''
 def journeyman3():
+    # this works with a netcat server
+    # the JourneymanStringServer crashes after sending 'alpha'
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(('localhost', 50001))
     recv_len = 1
+    s.connect(('localhost', 50001))        
     while recv_len:
-        data = s.recv(1028)
+        data = s.recv(4096)
         recv_len = len(data)
         print "Received: %s" % str(data)
+        if recv_len < 4096:
+            break
     s.close()
     return
 
