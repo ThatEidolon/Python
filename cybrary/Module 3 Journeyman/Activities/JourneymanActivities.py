@@ -1,4 +1,5 @@
 import socket
+# import JourneymanStringServer
 
 def journeyman1(str_list , item):
 
@@ -50,9 +51,18 @@ def journeyman2(final_num):
     return total
 
 
+
 '''1.3) Write a python script which connects to the included server 
 on port 50001 and returns the message it receives.'''
 def journeyman3():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('localhost', 50001))
+    recv_len = 1
+    while recv_len:
+        data = s.recv(1028)
+        recv_len = len(data)
+        print "Received: %s" % str(data)
+    s.close()
     return
 
 
@@ -61,5 +71,3 @@ and eye color fields, then implement it to describe yourself.'''
 def journeyman4():
     return
     
-
-
