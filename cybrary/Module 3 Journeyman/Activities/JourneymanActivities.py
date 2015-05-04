@@ -22,7 +22,7 @@ def journeyman1(str_list , item):
     new_file = open(str(str_list[item]), 'w+')
     
     # remove the filename from the list
-    str_list = str_list[:item] + some_list[item + 1:]
+    str_list = str_list[:item] + str_list[item + 1:]
 
     # start writing out the list
     for line in str_list:
@@ -39,11 +39,15 @@ returns the sum of every integer up to and including that number, use a
 generator.'''
 
 def sum_generator(final_num):
-    return #(Make this a yield)
+    for i in range(final_num):
+        yield i
 
 def journeyman2(final_num):
     #return sum(range(final_num+1))
-    return
+    total = 0
+    for i in sum_generator(final_num+1):
+        total += i
+    return total
 
 
 '''1.3) Write a python script which connects to the included server 
