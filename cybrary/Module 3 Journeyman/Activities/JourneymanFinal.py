@@ -7,6 +7,11 @@ import socket
 	deals with errors and missing files
 '''
 
+def configure_server():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind(('localhost', 50001))
+    return s
+
 def main():
 
 
