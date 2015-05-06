@@ -58,16 +58,10 @@ def journeyman3():
     # this works with a netcat server
     # the JourneymanStringServer crashes after sending 'alpha'
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    recv_len = 1
     s.connect(('localhost', 50001))        
-    while recv_len:
-        data = s.recv(4096)
-        recv_len = len(data)
-        print "Received: %s" % str(data)
-        if recv_len < 4096:
-            break
+    data = s.recv(4096)
     s.close()
-    return
+    return data
 
 
 '''1.4) Create a class called person, with height, weight, hair color, 
