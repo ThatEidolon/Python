@@ -12,6 +12,14 @@ def configure_server():
     s.bind(('localhost', 50001))
     return s
 
+def receive_data(some_socket):
+    data = ''
+    return data
+
+def send_data(some_socket, data):
+    return
+
+
 def main():
 
 
