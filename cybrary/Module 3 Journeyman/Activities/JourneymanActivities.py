@@ -39,16 +39,21 @@ def journeyman1(str_list , item):
 returns the sum of every integer up to and including that number, use a 
 generator.'''
 
-def sum_generator(final_num):
-    for i in range(final_num):
-        yield i
+#def sum_generator(final_num):
+    #for i in range(final_num+1):
+    #    yield i
+    current_num = 0
+    while (current_num <= final_num):
+        yield current_num
+        current_num += 1
 
 def journeyman2(final_num):
-    #return sum(range(final_num+1))
+    return sum(range(final_num))
     total = 0
-    for i in sum_generator(final_num+1):
+    for i in sum_generator(final_num):
         total += i
     return total
+    
 
 
 
