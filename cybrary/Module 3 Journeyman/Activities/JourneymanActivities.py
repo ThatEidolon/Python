@@ -73,13 +73,15 @@ def journeyman3():
 and eye color fields, then implement it to describe yourself.'''
 def journeyman4():
     class person(object):
-        def __init__(self, height, weight, hair_color, eye_color):
+        def __init__(self, height = 0, weight = 0, hair_color = '', eye_color = ''):
             self.height = height 
             self.weight = weight
             self.hair_color = hair_color
             self.eye_color = eye_color
+        def print_info (self):
+            print "Height:\t%d\tWeight:\t%d\tHair:\t%s\tEye:\t%s" % (self.height, self.weight, self.hair, self.eye)
     my_description = person(74,241,'brown', 'brown')
-    print my_description
+    my_description.print_info()
     return
 
 journeyman4()
