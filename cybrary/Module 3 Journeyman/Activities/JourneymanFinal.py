@@ -1,6 +1,9 @@
 import socket
 import threading
 
+HOST = 'localhost'
+PORT = 50002
+
 '''
 1.5) Python Journeyman: Write a Python server which:
 	receives a connection from the included client (JourneymanFinal.py)
@@ -12,7 +15,7 @@ import threading
 def configure_server():
     # configure server to listen on localhost port 50002, and listen for up to five clients
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.bind(('localhost', 50002))
+    s.bind((HOST, PORT))
     s.listen(5)
     return s
 
@@ -28,10 +31,8 @@ def server_loop():
 
 def save_data(filename, data):
     # save data to filename
-    print "Writing: %s" % filename
     with open(filename, 'w+') as f:
         f.write(data)
-    return
 
 def send_file(some_socket, filename):
     # read from filename and return data
@@ -48,20 +49,12 @@ def client_handler(client_socket):
     mode = str(data[:4])
     file_name = str(data[4:9]) # the fuck?!
     contents = str(data[9:])
-    print "Mode: %s" % mode
-    print "File Name: %s" % file_name
-    print "Contents: %s" % contents
     if mode == 'SAVE':
         save_data(file_name, contents)
     elif mode == 'LOAD':
         send_file(client_socket, file_name)
     client_socket.close()
     return
-
-def receive_data(some_socket):
-    data = ''
-    data = some_socket.recv(4096)
-    return data
 
 
 def main():
