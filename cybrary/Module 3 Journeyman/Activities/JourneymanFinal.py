@@ -30,10 +30,12 @@ def save_data(filename, data):
     # save data to filename
     return
 
-def read_data(filename):
+def send_file(some_socket, filename):
     # read from filename and return data
-    data = ''
-    return data
+    with open(filename) as f:
+       some_socket.send(f.readline())
+
+
 
 def client_handler(client_socket):
     data = client_socket.recv(4096)    
@@ -43,6 +45,10 @@ def client_handler(client_socket):
     print "Mode: %s" % mode
     print "File Name: %s" % file_name
     print "Contents: %s" % contents
+    if mode == 'SAVE':
+        save_data(file_name, contents)
+    elif mode == 'LOAD':
+        send_file(client_socket, file_name)
     client_socket.close()
     return
 
@@ -51,8 +57,6 @@ def receive_data(some_socket):
     data = some_socket.recv(4096)
     return data
 
-def send_data(some_socket, data):
-    return some_socket
 
 def main():
     # this is quick and dirty and will be a constant loop
