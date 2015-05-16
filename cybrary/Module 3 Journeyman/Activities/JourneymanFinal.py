@@ -33,7 +33,9 @@ def save_data(filename, data):
 def send_file(some_socket, filename):
     # read from filename and return data
     with open(filename) as f:
-       some_socket.send(f.readline())
+       for data in f.readlines():
+        some_socket.send(data)
+    return
 
 
 
