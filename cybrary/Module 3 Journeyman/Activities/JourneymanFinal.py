@@ -28,14 +28,18 @@ def server_loop():
 
 def save_data(filename, data):
     # save data to filename
+    print "Writing: %s" % filename
+    with open(filename, 'w+') as f:
+        f.write(data)
     return
 
 def send_file(some_socket, filename):
     # read from filename and return data
-    with open(filename) as f:
-       for data in f.readlines():
-        some_socket.send(data)
-    return
+    try:
+        with open(filename) as f:
+            some_socket.send(f.readline())
+    except:
+        some_socket.send("File Not Found")
 
 
 
