@@ -3,6 +3,7 @@ import threading
 
 HOST = 'localhost'
 PORT = 50002
+OPTIONS = ['SAVE', 'LOAD']
 
 '''
 1.5) Python Journeyman: Write a Python server which:
@@ -49,9 +50,9 @@ def client_handler(client_socket):
     mode = str(data[:4])
     file_name = str(data[4:9]) # the fuck?!
     contents = str(data[9:])
-    if mode == 'SAVE':
+    if mode == OPTIONS[0]: # save
         save_data(file_name, contents)
-    elif mode == 'LOAD':
+    elif mode == OPTIONS[1]: # load
         send_file(client_socket, file_name)
     client_socket.close()
     return
